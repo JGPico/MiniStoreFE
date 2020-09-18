@@ -7,7 +7,7 @@ function Home(props) {
             <img>
             </img>
             <button>
-                Shop Now!
+                Shop Now! asdf
             </button>
         </div>
     )
