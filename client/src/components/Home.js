@@ -1,13 +1,14 @@
 import React from 'react';
+import bazaar from '../assets/Fancy.jpg';
 
 function Home(props) {
 
     return (
-        <div>
-            <img>
+        <div className='homeWrapper'>
+            <img className='homeSplash' src={bazaar} alt='Splashscreen'>
             </img>
-            <button>
-                Shop Now! asdf
+            <button className='standardButton'>
+                Shop Now!
             </button>
         </div>
     )
