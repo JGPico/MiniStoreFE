@@ -1,0 +1,23 @@
+.homeWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .homeSplash {
+    width: 75%;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  
+  .standardButton {
+    margin: 2px;
+    width: 150px;
+    height: 50px;
+  }
+  
+  .shopButton {
+    margin: -18px;
+  }
