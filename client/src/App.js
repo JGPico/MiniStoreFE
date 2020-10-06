@@ -5,7 +5,6 @@ import './App.css';
 import Home from './components/Home';
 import ItemList from './components/ItemList';
 
-
 const items = [
   {
     name: "Reel Viewer",
