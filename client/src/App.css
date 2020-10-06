@@ -10,3 +10,13 @@
   margin-right: auto;
   margin-bottom: 3px;
 }
+
+.navLink {
+  text-decoration: none;
+  color: navy;
+  font-size: 20px;
+}
+
+.navLink:hover {
+  color: red;
+}

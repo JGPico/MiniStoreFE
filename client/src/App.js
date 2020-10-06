@@ -50,10 +50,10 @@ function App() {
           Mini Store
         </h1>
         <div className='navBar'>
-          <NavLink exact to="/">
+          <NavLink className='navLink' exact to="/">
             Home
           </NavLink>
-          <NavLink to="/item-list">
+          <NavLink className='navLink' to="/item-list">
             Shop
           </NavLink>
         </div>
