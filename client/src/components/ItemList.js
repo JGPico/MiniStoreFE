@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './ItemList.css';
 
 function ItemList(props) {
 
     return (
         <div >
-            {props.items.map(item => (
+            {props.shopItems.map(item => (
                 <div key={item.id}>
                     <img className='itemImage' src={item.imageUrl} alt={item.name}></img>
                     <p>{item.name}</p>
@@ -17,5 +18,10 @@ function ItemList(props) {
 
 }
 
+const mapStateToProps = state => {
+    return {
+        shopItems: state.shopItems
+    };
+};
 
-export default ItemList;
+export default connect(mapStateToProps, {})(ItemList);
