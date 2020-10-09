@@ -4,6 +4,7 @@ import './App.css';
 
 import Home from './components/Home';
 import ItemList from './components/ItemList';
+import Item from './components/Item';
 
 // const items = [
 //   {
@@ -58,12 +59,11 @@ function App() {
         </div>
       </nav>
 
-      <Route exact path="/" component={Home}>
+      <Route exact path="/" component={Home} />
 
-      </Route>
-      <Route exact path='/item-list'>
-        <ItemList></ItemList>
-      </Route>
+      <Route exact path='/item-list' component={ItemList} />
+
+      <Route exact path='/item-list/:id' component={Item} />
 
     </div>
   );
