@@ -2,6 +2,11 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import ItemDescription from './ItemDetails';
+import ItemShipping from './ItemShipping';
+
+import './ItemList.css';
+
 function Item(props) {
 
     const item = props.shopItems.find(
@@ -20,27 +25,27 @@ function Item(props) {
                 </div>
                 <div className='itemTitleWrapper'>
                     <h2>{item.name}</h2>
-                    <h2>{item.price}</h2>
+                    <h2>${item.price}</h2>
                 </div>
             </div>
 
-            {/* <nav className='itemSubNav'>
-                <NavLink exact to={`/item-list/${item.id}`}>
-                    the store
+            <nav className='itemSubNav'>
+                <NavLink className='itemSubNavDet' exact to={`/item-list/${item.id}`}>
+                    Details
                 </NavLink>
-                <NavLink to={`/item-list/${item.id}/shipping`}>
+                <NavLink className='itemSubNavDet' to={`/item-list/${item.id}/shipping`}>
                     Shipping
                 </NavLink>
             </nav>
 
             <Route
-            exact
-            path="/item-list/:id"
-            render={props => <ItemDescription/>}/>
+                exact
+                path="/item-list/:id"
+                render={props => <ItemDescription {...props} item={item} />} />
 
             <Route
-            path="/item-list/:id/shipping"
-            render={props => <ItemShipping/>}/> */}
+                path="/item-list/:id/shipping"
+                render={props => <ItemShipping {...props} item={item} />} />
         </div>
     )
 
