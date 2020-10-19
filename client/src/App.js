@@ -63,7 +63,7 @@ function App() {
 
       <Route exact path='/item-list' component={ItemList} />
 
-      <Route exact path='/item-list/:id' component={Item} />
+      <Route path='/item-list/:id' component={Item} />
 
     </div>
   );

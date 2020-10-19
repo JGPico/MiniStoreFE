@@ -30,7 +30,7 @@ function Item(props) {
             </div>
 
             <nav className='itemSubNav'>
-                <NavLink className='itemSubNavDet' exact to={`/item-list/${item.id}`}>
+                <NavLink className='itemSubNavDet' to={`/item-list/${item.id}/description`}>
                     Details
                 </NavLink>
                 <NavLink className='itemSubNavDet' to={`/item-list/${item.id}/shipping`}>
@@ -39,13 +39,13 @@ function Item(props) {
             </nav>
 
             <Route
-                exact
-                path="/item-list/:id"
+                path="/item-list/:id/description"
                 render={props => <ItemDescription {...props} item={item} />} />
 
             <Route
                 path="/item-list/:id/shipping"
                 render={props => <ItemShipping {...props} item={item} />} />
+
         </div>
     )
 
